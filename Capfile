@@ -19,9 +19,7 @@ require 'capistrano/rbenv'
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
-require 'capistrano/puma'
-install_plugin Capistrano::puma
-install_plugin Capistrano::Puma::Daemon
+require "capistrano/puma"
 
 # Include tasks from other gems included in your Gemfile
 #
