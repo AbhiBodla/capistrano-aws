@@ -1,7 +1,7 @@
 server '3.145.140.228', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,      'git@github.com:AbhiBodla/capistrano-aws.git'
-set :application,   'capistrano'
+set :application,   'capistrano-aws'
 
 set :rbenv_ruby,    '3.0.2'
 #set :rbenv_ruby_dir, '/home/ubuntu/.rbenv/versions/3.0.2'
