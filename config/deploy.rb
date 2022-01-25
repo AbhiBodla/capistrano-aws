@@ -1,6 +1,6 @@
 server '3.145.140.228', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,      'git@github.com:AbhiBodla/capistrano-aws.git'
+set :repo_url,      'https://github.com/AbhiBodla/capistrano-aws.git'
 set :application,   'capistrano-aws'
 
 set :rbenv_ruby,    '3.0.2'
