@@ -1,4 +1,4 @@
-server '3.145.140.228', port: 22, roles: [:web, :app, :db], primary: true
+server '18.118.15.217', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,      'https://github.com/AbhiBodla/capistrano-aws.git'
 set :application,   'capistrano-aws'
