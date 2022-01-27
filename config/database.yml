@@ -12,30 +12,25 @@
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
-# gem 'pg'
+# gem "pg"
 #
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: 123456
-
+  password: password
+  pool: 5
+  adapter: postgresql
+  
 
 development:
   <<: *default
   database: capistrano_development
-  username: postgres
-  password: 123456
-
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: capistrano
+  #username: capistrano_aws
 
   # The password associated with the postgres role (username).
   #password:
@@ -64,9 +59,6 @@ development:
 test:
   <<: *default
   database: capistrano_test
-  username: postgres
-  password: 123456
-
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,13 +75,11 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-#     url: <%= ENV['MY_APP_DATABASE_URL'] %>
+#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  database: capistrano_production
-  username: postgres
-  password: 123456
+  database: capistrano
