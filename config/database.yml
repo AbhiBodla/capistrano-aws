@@ -17,7 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  password: password
+  password: 123456
   pool: 5
   adapter: postgresql
   
@@ -83,3 +83,5 @@ test:
 production:
   <<: *default
   database: capistrano
+  username: postgres
+  password: 123456
